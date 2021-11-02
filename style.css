@@ -50,7 +50,7 @@ a {
 
 /* Welcome Section */
 #welcome {
-  background-image: url(/img/beer-background3.jpg);
+  background-image: url(img/beer-background3.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;
