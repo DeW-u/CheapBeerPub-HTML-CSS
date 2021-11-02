@@ -1,0 +1,356 @@
+:root {
+  --brown1: #a5120b;
+  --wheatWelcome: #d6c384;
+  --beerBackground: #01332a;
+  --beerBackgroundS: #08241c;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Vollkorn SC", serif;
+  scroll-behavior: smooth;
+  background-color: #08241c;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 4rem;
+  color: var(--brown1);
+  text-shadow: 0 1px 0 var(--wheatWelcome);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.description {
+  margin-top: 5px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.5rem;
+  color: var(--wheatWelcome);
+  text-shadow: 0 1px 0 var(--brown1);
+}
+
+/* Welcome Section */
+#welcome {
+  background-image: url(/img/beer-background3.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+#welcome::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#welcome .welcome {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+
+#welcome h1 {
+  letter-spacing: 0.2rem;
+  display: block;
+  width: fit-content;
+  font-size: 7rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 1s ease forwards;
+  animation-delay: 1s;
+}
+#welcome h1:nth-child(1) {
+  animation: text_reveal_name 1s ease forwards;
+  animation-delay: 1s;
+}
+#welcome h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#welcome h1:nth-child(3) {
+  animation-delay: 3s;
+}
+#welcome h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--brown1);
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.5s;
+}
+#welcome h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#welcome h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#welcome h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+
+#welcome .cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: var(--brown1);
+  background-color: var(--wheatWelcome);
+  border: 2px solid var(--brown1);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+#welcome .cta:hover {
+  color: var(--wheatWelcome);
+  background-color: var(--brown1);
+}
+/* End Welcome Section */
+
+/* About Us Section */
+#about {
+  background-color: var(--beerBackground);
+  position: relative;
+  z-index: 1;
+}
+
+#about .about {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 10px;
+}
+
+#about::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#about p {
+  margin-top: 5px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.5rem;
+  color: var(--wheatWelcome);
+  text-shadow: 0 1px 0 var(--brown1);
+}
+
+/* End About Us Section */
+
+/* Beers Section */
+
+#beers {
+  background-color: var(--beerBackground);
+  position: relative;
+  z-index: 1;
+}
+
+#beers::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#beers .beers {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 10px;
+}
+
+#beers .beers-header {
+  margin-bottom: 50px;
+}
+
+#beers .all-beers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#beers .beer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#beers .beer-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    90deg,
+    rgba(79, 119, 107, 1) 0%,
+    rgba(74, 107, 108, 1) 50%,
+    rgba(7, 61, 52, 1) 100%
+  );
+  color: var(--wheatWelcome);
+  text-shadow: 0 1px 0 var(--brown1);
+}
+
+#beers .beer-info h1 {
+  font-size: 4rem;
+  /* font-weight: 500; */
+  color: var(--brown1);
+  text-shadow: 0 1px 0 var(--wheatWelcome);
+}
+
+#beers .beer-info h2 {
+  font-size: 2rem;
+  /* font-weight: 300; */
+  margin-top: 10px;
+}
+
+#beers .beer-info p {
+  font-size: 1.5rem;
+}
+
+#beers .beer-img {
+  padding: 30px;
+  flex-basis: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(49, 89, 77, 1) 0%,
+    rgba(44, 77, 78, 1) 50%,
+    rgba(0, 51, 42, 1) 100%
+  );
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#beers .beer-img img{
+  transition: .3s ease transform;
+}
+
+#beers .beer-img:hover img{
+  transform: scale(1.1);
+}
+
+/* End Beers Section */
+
+/* Alkofun Section */
+/* End Alkofun Section */
+
+/* Road Section */
+#road {
+  background-color: var(--beerBackground);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#road::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#road .road {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 10px;
+}
+
+#road .road-header {
+  margin-bottom: 50px;
+}
+
+#road .gmap_canvas{
+  border-radius: 10px;
+  align-self: center;
+}
+/* End Road Section */
+
+/* Keyframes */
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: var(--wheatWelcome);
+    text-shadow: 0 2px 0 var(--brown1);
+  }
+}
+@keyframes text_reveal_name {
+  100% {
+    color: var(--brown1);
+    text-shadow: 0 2px 0 var(--wheatWelcome);
+  }
+}
+/* End Keyframes */
