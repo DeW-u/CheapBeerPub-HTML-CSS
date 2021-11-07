@@ -89,7 +89,7 @@ a {
 #header .header {
   min-height: 8vh;
   background-color: transparent;
-  transition: .6s ease background-color;
+  transition: .3s ease background-color;
 }
 
 #header .nav-bar {
@@ -692,6 +692,74 @@ a {
   }
 }
 /* End Keyframes */
+@media only screen and (max-width: 280px) {
+  .cta {
+    text-align: start;
+    font-size: 1.5rem;
+    padding: 10px 10px;
+  }
+
+  .description {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+
+  h1.section-title {
+    font-size: 3rem;
+  }
+  .brand h1 {
+    font-size: 1.8rem;
+  }
+  #header .nav-list ul a {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.2rem !important;
+    text-decoration: none;
+    color: var(--wheatWelcome);
+    text-shadow: 1px 1px 1px var(--brown1);
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+  }
+  #services .service-bottom .icon img{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  #services .service-bottom .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 5px;
+  }
+  #services .service-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: var(--brown1);
+    text-shadow: 0 1px 0 var(--wheatWelcome);
+  }
+  #services .service-item p {
+    font-size: 1.2rem;
+    text-align: left;
+    color: var(--wheatWelcome);
+    text-shadow: 0 1px 0 var(--brown1);
+  }
+  #footer {
+    text-align: center !important;
+  }
+  #welcome h1 {
+    font-size: 3rem;
+  }
+  #welcome h1:nth-child(2) {
+    font-size: 2rem;
+  }
+  #welcome h1:nth-child(3) {
+    font-size: 2rem;
+  }
+  #header .nav-list ul a {
+    font-size: 2rem;
+  }
+}
+/* Media Query for Fold */
 
 /* Media Query for Tablet */
 @media only screen and (min-width: 768px) {
