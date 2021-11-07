@@ -126,7 +126,7 @@ a {
   left: 0;
 }
 #header .nav-list ul a {
-  font-size: 2.5rem !important;
+  font-size: 2rem !important;
   letter-spacing: 0.2rem !important;
   text-decoration: none;
   color: var(--wheatWelcome);
@@ -174,7 +174,7 @@ a {
   z-index: 100;
   cursor: pointer;
   transform: scale(0.8);
-  margin-right: 20px;
+  margin-right: 7px;
 }
 
 #header .hamburger::after {

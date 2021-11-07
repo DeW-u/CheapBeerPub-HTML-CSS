@@ -14,7 +14,7 @@ hamburger.addEventListener("click", () => {
 
 document.addEventListener("scroll", () => {
   var scroll_position = window.scrollY;
-   if (scroll_position > 230) {
+   if (scroll_position > 60) {
     // header.style.background =
     //   "linear-gradient(90deg,rgba(145, 110, 38, 1) 0%,var(--beerBackgroundS) 100%)";
     header.style.backgroundColor = "rgba(145, 110, 38, 1)";
