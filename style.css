@@ -454,12 +454,13 @@ a {
   flex-basis: 80%;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 30px;
   border-radius: 10px;
   background-size: cover;
   margin: 10px 5%;
+  height: 350px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -824,6 +825,7 @@ a {
     flex-basis: 22%;
     margin: 1.5%;
     background-size: cover;
+    height: 450px;
   }
   #services .service-bottom .service-item:nth-child(1) {
     background-position: 45% 0px;
